@@ -11,7 +11,6 @@ const PART: u8 = 2;
 fn main() {
     let args: Vec<String> = env::args().collect();
     let path: &str = &args[1];
-    //println!("{:?}", read_file_lines(path));
     let lines = read_file_lines(path);
     if PRINT {
         print_vec_lines(&lines);
