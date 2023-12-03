@@ -1,7 +1,7 @@
 use std::fmt::Display;
-use std::fs::read_to_string;
 use std::env;
 use aho_corasick::AhoCorasick;
+use aoc::read_file_lines;
 
 const PRINT: bool = false;
 const PART: u8 = 2;
@@ -26,13 +26,6 @@ fn main() {
     println!("Calibration sum is {}", sum)
 }
 
-fn read_file_lines(path: &str) -> Vec<String> {
-    read_to_string(path)
-        .unwrap()
-        .lines()
-        .map(String::from)
-        .collect()
-}
 
 fn get_calibration_sum_corrected(lines: &Vec<String>) -> u32 {
 

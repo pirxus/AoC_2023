@@ -1,15 +1,7 @@
-use std::fs::read_to_string;
 use std::env;
+use aoc::read_file_lines;
 
 const PART: i32 = 2;
-
-fn read_file_lines(path: &str) -> Vec<String> {
-    read_to_string(path)
-        .unwrap()
-        .lines()
-        .map(String::from)
-        .collect()
-}
 
 fn get_sum(lines: Vec<String>) -> usize {
     let limit = vec![12, 13, 14];
